@@ -119,3 +119,13 @@ export const createOrder = (tableId,createOrderData) => {
         })
         .catch(err => console.log(err));
 };
+
+export const getPromotion = () => {
+    return fetch(`${API}/promotions`, {
+        method: "GET"
+    })
+        .then(response => {
+            return response.json();
+        })
+        .catch(err => console.log(err));
+};

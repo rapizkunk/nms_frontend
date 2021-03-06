@@ -22,3 +22,38 @@
 .site-layout .site-layout-background {
   background: #fff;
 }
+*{
+  margin:0;
+  padding:0;
+}
+
+.card-wrapper.hover{
+  
+  position:relative;
+  width: 100%;
+  padding:0 10px;
+  box-sizing: border-box;
+  
+  
+}
+:hover,:active,:focus{
+  outline:none;
+  border:none;
+}
+
+.card{
+  width:100%;
+  height:450px;
+  border-radius: 16px;
+  overflow:hidden;
+  cursor:pointer;
+  position: relative;
+}
+
+.slide {
+  font-family: sans-serif;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+}

@@ -14,7 +14,6 @@ const CardMenu = ({
 }) => {
   const [redirect, setRedirect] = useState(false);
   const [count, setCount] = useState(product.count);
-
   const addToCart = () => {
     // console.log('added');
     addItem(product, setRedirect(true));

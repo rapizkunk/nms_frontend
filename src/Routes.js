@@ -14,6 +14,10 @@ import AddMenu from "../src/admin/Menu/AddProduct";
 import ManageMenu from './admin/Menu/ManageProduct'
 import UpdateMenu from "../src/admin/Menu/UpdateProduct";
 
+import Adminpromotion from "../src/admin/promotion/Adminpromotion";
+import Managepromotion from './admin/promotion/Managepromotion';
+import Updatepromotion from './admin/promotion/Updatepromotion';
+
 import ManageUsers from "./admin/user/ManageUser";
 import UpdateUser from "./admin/user/UpdateUser";
 
@@ -48,12 +52,25 @@ function Routes() {
           component={ManageMenu}
         />
         <AdminRoute
-          path="/Manage/product/update/:productId"
+          path="/Manage/menu/update/:productId"
           exact
           component={UpdateMenu}
         />
 
-        
+          <AdminRoute 
+          path="/create/promotion" 
+          exact 
+          component={Adminpromotion} />
+            <AdminRoute 
+          path="/Manage/promotion" 
+          exact 
+          component={Managepromotion} />
+               <AdminRoute 
+          path="/Manage/promotion/update/:promotionId" 
+          exact 
+          component={Updatepromotion} />
+
+
         <AdminRoute
           path="/Manage/category"
           exact
@@ -75,6 +92,7 @@ function Routes() {
           exact
           component={UpdateTable}
         />
+     
         <CartRoute path="/cart/:tableId" exact component={Cart} />
         <MenuRoute path="/Menu/:tableId" exact component={Menu} />
       </Switch>

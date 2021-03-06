@@ -340,3 +340,63 @@ export const deleteTable = (tableId, userId, token) => {
     .catch((err) => console.log(err));
 };
 
+
+export const createPromotion = (userId, token, promotion) => {
+  return fetch(`${API}/promotion/create/${userId}`, {
+    method: "POST",
+    headers: {
+      Accept: "application/json",
+      Authorization: `Bearer ${token}`,
+    },
+    body: promotion,
+  })
+    .then((response) => {
+      return response.json();
+    })
+    .catch((err) => {
+      console.log(err);
+    });
+};
+
+
+export const getPromotion = () => {
+  return fetch(`${API}/promotions`, {
+    method: "GET",
+  })
+    .then((response) => {
+      return response.json();
+    })
+    .catch((err) => console.log(err));
+};
+
+export const deletePromotion = (promotionId, userId, token) => {
+  return fetch(`${API}/promotion/${promotionId}/${userId}`, {
+    method: "DELETE",
+    headers: {
+      Accept: "application/json",
+      "Content-Type": "application/json",
+      Authorization: `Bearer ${token}`,
+    },
+  })
+    .then((response) => {
+      return response.json();
+    })
+    .catch((err) => console.log(err));
+};
+
+
+
+export const updatePromotion = (promotionId, userId, token, promotion) => {
+  return fetch(`${API}/promotion/${promotionId}/${userId}`, {
+    method: "PUT",
+    headers: {
+      Accept: "application/json",
+      Authorization: `Bearer ${token}`,
+    },
+    body: promotion,
+  })
+    .then((response) => {
+      return response.json();
+    })
+    .catch((err) => console.log(err));
+};

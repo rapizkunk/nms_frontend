@@ -52,7 +52,8 @@ const LayoutWithRoute = ({ children, history }) => {
           <Link to="/Manage/users">Staff</Link>
         </Menu.Item>
 
-        <Menu.Item key="5">Promotion</Menu.Item>
+        <Menu.Item key="5">          <Link to="/Manage/users">Staff</Link>
+Promotion</Menu.Item>
       </SubMenu>
 
       <Menu.Item

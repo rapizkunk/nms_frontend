@@ -5,7 +5,7 @@ import { API } from "../config";
 import MangeCetagories from "./category/ManageCategory";
 import ManageStaff from "./user/ManageUser";
 import ManageMenu from "./Menu/ManageProduct";
-
+import Managepromotion from './promotion/Managepromotion'
 const AdminPage = () => {
   const card = {
     borderRadius: 25,
@@ -66,6 +66,11 @@ const AdminPage = () => {
       <Row>
           <Col>
           <ManageStaff />
+          </Col>
+        </Row>
+        <Row>
+          <Col>
+          <Managepromotion />
           </Col>
         </Row>
     </div>

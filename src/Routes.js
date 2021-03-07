@@ -28,6 +28,11 @@ import AdminRoute from "./auth/AdminRoute";
 import MenuRoute from "./auth/MenuRoute";
 import CartRoute from './auth/CartRoute'
 
+import Report from './admin/Report/Report'
+import saleReport from './admin/Report/saleReport'
+
+
+
 function Routes() {
   return (
     <BrowserRouter>
@@ -91,6 +96,16 @@ function Routes() {
           path="/Manage/table/update/:tableId"
           exact
           component={UpdateTable}
+        />
+        <AdminRoute
+          path="/Report/bestseller"
+          exact
+          component={Report}
+        />
+        <AdminRoute
+          path="/Report/saleReport"
+          exact
+          component={saleReport}
         />
      
         <CartRoute path="/cart/:tableId" exact component={Cart} />

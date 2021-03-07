@@ -6,6 +6,7 @@ import MangeCetagories from "./category/ManageCategory";
 import ManageStaff from "./user/ManageUser";
 import ManageMenu from "./Menu/ManageProduct";
 import Managepromotion from './promotion/Managepromotion'
+import Report from './Report/Report'
 const AdminPage = () => {
   const card = {
     borderRadius: 25,
@@ -73,6 +74,7 @@ const AdminPage = () => {
           <Managepromotion />
           </Col>
         </Row>
+      
     </div>
   );
 };

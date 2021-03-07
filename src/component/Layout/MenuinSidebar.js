@@ -36,8 +36,23 @@ const MenuinSidebar = ({ history }) => {
         </Menu.Item>
 
         <Menu.Item key="5"><Link to="/Manage/promotion">Promotion</Link>
-</Menu.Item>
+        </Menu.Item>
+      
       </SubMenu>
+      
+
+      <SubMenu key="sub2" icon={<FormOutlined style={{fontSize:20}}/>} title="Report">
+     
+        <Menu.Item key="6">
+          <Link to="/Report/bestseller">Best seller</Link>
+        </Menu.Item>
+        <Menu.Item key="7">
+          <Link to="/Report/saleReport">Salereport</Link>
+        </Menu.Item>
+      </SubMenu>
+
+
+
 
       <Menu.Item icon={<AuditOutlined style={{fontSize:20}} />}>
           <Link to="/">Order</Link>
